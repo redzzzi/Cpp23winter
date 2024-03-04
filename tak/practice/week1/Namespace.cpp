@@ -12,11 +12,11 @@ namespace APPLE {
   string OSName = "Maverick 11.1";
 }
 
-//using namespace 사용하지 않았을 때:
-int main() {
-  cout << "Hello World!" << MS::OSVersion << endl;
-  return 0;
-}
+// //using namespace 사용하지 않았을 때:
+// int main() {
+//   cout << "Hello World!" << MS::OSVersion << endl;
+//   return 0;
+// }
 
 //using namespace 사용했을 때:
 int main() {
