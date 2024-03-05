@@ -9,7 +9,7 @@ namespace MS {
 
 namespace APPLE {
   double OSVersion = 14.1;
-  string OSName = "Maverick 11.1";
+  string OSName = "Mavericks 11.1";
 }
 
 // //using namespace 사용하지 않았을 때:
