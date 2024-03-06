@@ -22,6 +22,8 @@ int main() {
   cout << "Pi = " << Pi << endl;
   cout << setprecision(7); //정수자리 포함하여 7자리까지 나타내도록 함
   cout << "Pi = " << Pi << endl;
+  cout << fixed << "Fixed Pi = " << Pi << endl;
+  cout << scientific << "Fixed Pi = " << Pi << endl;
   cout << "---------------------------------" << endl;
 
   return 0;
