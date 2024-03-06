@@ -25,6 +25,8 @@ int main() {
   cout << fixed << "Fixed Pi = " << Pi << endl;
   cout << scientific << "Fixed Pi = " << Pi << endl;
   cout << "---------------------------------" << endl;
+  
+  // cout << setiosflags(ios_base::
 
   return 0;
 }
