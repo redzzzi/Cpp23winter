@@ -11,10 +11,27 @@ int main() {
 
   pInteger = &DogAge;
   cout << pInteger << endl; // DogAge의 주솟값을 프린트
+  cout << sizeof(pInteger) << endl;
 
   char* pChar;
   *pChar = 'A';
   cout << *pChar << endl;
-  // 첫 시작 주소를 알면, 전체 사이즈를 알 수 있음
+  cout << sizeof(pChar) << endl;
+  // 첫 시작 주소를 알면, 전체 사이즈를 알 수 있음 size of stack?
+  
+  // int* pNumbers = new int; // Heap: dynamic allocation, new -> pointer
+
+  // every function has its own STACK!!
+  // use HEAP not stack!
+
+  // delete [] pNumbers;
+  // int* myP = new int(4);
+  //*myP;
+
+  int* pNumbers = new int(10);
+  for (int i=0; i<10; i++) {
+    cout << *(pNumbers + i) << endl;
+    cout << pNumbers[i] << endl;
+  }
   return 0;
 }
