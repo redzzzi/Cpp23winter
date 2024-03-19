@@ -1,8 +1,15 @@
 #include <iostream>
 
+void ReturnSquare(int& Number) {
+  Number *= Number;
+}
+
 int main() {
 
-
+  int Number = 20;
+  ReturnSquare(Number);
+  std::cout << Number << std::endl;
+  
   // try {
   //   // Request lots of memory source
   //   int *pAge = new int [536870911];
@@ -36,6 +43,19 @@ int main() {
   std::cout << SomeRef << std::endl;
   std::cout << &intOne << std::endl;
   std::cout << &SomeRef << std::endl;
+
+  int Original = 30;
+  int& Ref = Original;
+
+  std::cout << Original << std::endl;
+  std::cout << Ref << std::endl;
+  int& Ref2 = Ref;
+  std::cout << Ref2 <<std::endl;
+
+  
+  std::cout << &Original << std::endl;
+  std::cout << &Ref << std::endl;
+  std::cout << &Ref2 <<std::endl;
 
   return 0;
 }
