@@ -20,6 +20,7 @@ public:
 };
 
 int main() {
+  // INSTANCE -> located in STACK
   Human Julie;
 
   Julie.Age = 21;
