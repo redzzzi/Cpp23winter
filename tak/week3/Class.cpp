@@ -9,7 +9,6 @@ public:
   string Name;
   string DateOfBirth;
 public:
-<<<<<<< HEAD
   Human() {
     Age = 10;
     cout << "Constructor is called!!" << endl;
@@ -17,8 +16,6 @@ public:
   ~Human() { // Destructor
     cout << "Destructor is called!!" << endl;
   }
-=======
->>>>>>> 3fe26f3607128c4b20e9f49f0744c245a00c9cf7
   void Talk(string TextToTalk) {
     cout << TextToTalk << endl;
   }
@@ -37,15 +34,12 @@ int main() {
   Julie.Name = "Julie Anna";
   Julie.Introduce();
 
-<<<<<<< HEAD
   Human *Joe = new Human();
   (*Joe).Age = 23;
   (*Joe).Name = "Joe";
   (*Joe).Introduce();
   Joe -> Introduce(); // -> operator represents Introcduce.
 
-=======
->>>>>>> 3fe26f3607128c4b20e9f49f0744c245a00c9cf7
   cout << "hello world!" << endl;
   return 0;
 }
