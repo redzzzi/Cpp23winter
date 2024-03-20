@@ -6,10 +6,15 @@ class SimpleCat {
 public:
   SimpleCat();
   ~SimpleCat();
+  SimpleCat(SimpleCat&);
 };
 
 SimpleCat::SimpleCat() {
   cout << "Simple Cat Constructor ..." << endl;
+}
+
+SimpleCat::SimpleCat(SimpleCat&) {
+  cout << "Simple Cat COPY Constructor ..." << endl;
 }
 
 SimpleCat::~SimpleCat() {
