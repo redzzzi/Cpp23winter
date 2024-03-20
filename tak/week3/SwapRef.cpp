@@ -1,6 +1,6 @@
 #include <iostream>
 
-void swap (int& rx, int& ry) {
+void swap (int &rx, int &ry) {
   int temp;
 
   temp = rx;
