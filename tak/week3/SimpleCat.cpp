@@ -4,7 +4,7 @@ using namespace std;
 
 class SimpleCat {
 public:
-  SimpleCat():
+  SimpleCat();
   ~SimpleCat();
 };
 
@@ -17,7 +17,7 @@ SimpleCat::~SimpleCat() {
 }
 
 SimpleCat FunctionOne(SimpleCat theCat);
-SimpleCat FunctionTwo(SimpleCat *theCat);
+SimpleCat* FunctionTwo(SimpleCat *theCat);
 
 int main() {
   cout << "Hello world!" << endl;
