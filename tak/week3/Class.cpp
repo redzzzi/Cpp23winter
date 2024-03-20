@@ -9,6 +9,13 @@ public:
   string Name;
   string DateOfBirth;
 public:
+  Human() {
+    Age = 10;
+    cout << "Constructor is called!!" << endl;
+  }
+  ~Human() { // Destructor
+    cout << "Destructor is called!!" << endl;
+  }
   void Talk(string TextToTalk) {
     cout << TextToTalk << endl;
   }
@@ -26,6 +33,12 @@ int main() {
   Julie.Age = 21;
   Julie.Name = "Julie Anna";
   Julie.Introduce();
+
+  Human *Joe = new Human();
+  (*Joe).Age = 23;
+  (*Joe).Name = "Joe";
+  (*Joe).Introduce();
+  Joe -> Introduce(); // -> operator represents Introcduce.
 
   cout << "hello world!" << endl;
   return 0;
