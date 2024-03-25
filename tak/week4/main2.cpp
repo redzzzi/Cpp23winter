@@ -30,7 +30,8 @@ SimpleCat::~SimpleCat() {
 }
 
 SimpleCat FunctionOne(SimpleCat theCat);
-const SimpleCat* const FunctionTwo(const SimpleCat *theCat);
+// const SimpleCat* const FunctionTwo(const SimpleCat * const theCat);
+const SimpleCat& FunctionTwo(const SimpleCat& theCat);
 
 int main()
 {
@@ -47,7 +48,7 @@ SimpleCat FunctionOne(SimpleCat theCat) {
   return theCat;
 }
 
-const SimpleCat* const FunctionTwo(const SimpleCat *theCat) {
+const SimpleCat& FunctionTwo(const SimpleCat& theCat) {
   cout << "Function Two Returning ..."<< endl;
   // theCat -> SetAge(8); // const cannot change
   return theCat;
