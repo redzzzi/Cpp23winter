@@ -45,7 +45,14 @@ int main()
     fsIn.read((char*)&somePerson, sizeof(somePerson));
     cout << "Name: " << somePerson.Name << endl;
     cout << "Age: " << somePerson.Age << endl;
+    cout << "DOB: " << somePerson.DOB << endl;
   }
+
+  int i = 10;
+  stringstream convertStream;
+  convertStream << i;
+  string strInput;
+  convertStream >> strInput;
 
   return 0;
 }
