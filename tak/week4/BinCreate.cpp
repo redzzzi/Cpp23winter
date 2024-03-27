@@ -54,5 +54,11 @@ int main()
   string strInput;
   convertStream >> strInput;
 
+  cout << i << endl;
+  cout << strInput << endl;
+
+  int MyNumbers[] = {2011, 2052, -525};
+  int Solar[2][3] = {{0, 1, 2}, {3, 4, 5}};
+
   return 0;
 }
