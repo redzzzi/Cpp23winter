@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cstring>
+#include <fstream>
+#include <iomanip>
+#include <string>
 
 using namespace std;
 
@@ -25,6 +28,8 @@ struct Human {
 
 int main()
 {
-  cout << "Hello world!" << endl;
+  // cout << "Hello world!" << endl;
+  Human Input("Tom Cruise", 101, "May 1910");
+  ofstream fsOut ("MyBinary.bin", ios_base::out | ios_base::binary);
   return 0;
 }
