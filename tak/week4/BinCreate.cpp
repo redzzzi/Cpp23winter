@@ -34,8 +34,17 @@ int main()
 
   if (fsOut.is_open()) {
     cout << "Writing ..." << endl;
-    fsOut.write((char *)(&Input), sizeof(Input));
+    // fsOut.write((char *)(&Input), sizeof(Input));
+    fsOut.write(reinterpret_cast<const char *>(&Input), sizeof(Input));
     fsOut.close();
+  }
+
+  ifstream fsIn("MyBinary.bin", ios_base::in | ios_base::binary);
+  if (fsIn.is_open()) {
+    Human somePerson;
+    fsIn.read((char*)&somePerson, sizeof(somePerson));
+    cout << "Name: " << somePerson.Name << endl;
+    cout << "Age: " << somePerson.Age << endl;
   }
 
   return 0;
