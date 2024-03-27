@@ -31,5 +31,12 @@ int main()
   // cout << "Hello world!" << endl;
   Human Input("Tom Cruise", 101, "May 1910");
   ofstream fsOut ("MyBinary.bin", ios_base::out | ios_base::binary);
+
+  if (fsOut.is_open()) {
+    cout << "Writing ..." << endl;
+    fsOut.write((char *)(&Input), sizeof(Input));
+    fsOut.close();
+  }
+
   return 0;
 }
