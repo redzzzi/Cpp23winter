@@ -140,10 +140,10 @@ int main()
 </details>
 
 ```cpp
-variant<int, double> varSafe;
-varSafe = 3.14; // variant stores double
-double pi = get<double>(varSafe); // 3.14
-double pi2 = get<1>(varSafe); // 3.14
+variant<int, double> varSafe; // variant can store int or double
+varSafe = 3.14; // variant stores double from now on
+double pi = get<double>(varSafe); // 3.14, pi stores double value brought from varSafe
+double pi2 = get<1>(varSafe); // 3.14, ''
 get<char>(varSafe); // compile fails: variant with two types, not three try
 {
     get<int>(varSafe); // throws exception as variant stores double
