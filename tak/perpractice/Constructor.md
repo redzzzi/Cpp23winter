@@ -1,6 +1,7 @@
 [*constructor* and *destructor* - wikidocs](https://wikidocs.net/17145)
 <details><summary>SUMMARY</summary>
 <div markdown="1">
+
 - 생성자(*constructor*)
     - 클래스 객체 생성 시 private 멤버를 자동으로 초기화
     - 생성자 이름과 클래스 이름이 같아야 함
@@ -46,5 +47,6 @@ int main() {
     return 0;
 }
 ```
+</div>
 
 # 1. Using Constructors to **Convert Types**
