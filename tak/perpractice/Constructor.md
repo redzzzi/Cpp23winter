@@ -152,3 +152,48 @@ get<char>(varSafe); // compile fails: variant with two types, not three try
 }
 catch (bad_variant_access&) { // exception handler code}
 ```
+
+# 4. Using Aggregate Initialization on Classes and Structs
+- *aggregate initialization* syntax
+```cpp
+Type objectName = {argument1, ..., argmentN};
+```
+- 대신, C++11 이후로는 ...
+```cpp
+Type objectName {argument1, ..., argumentN};
+```
+- 배열, 문자열 파트에서 본 배열 초기화에서의 *aggregate initialization*
+```cpp
+int myNums[] = {9, 5, -1}; // myNums is int[3]
+char hello[6] = {'h', 'e', 'l', 'l', 'o', '\0'};
+```
+
+- 다음 예제들은 앞서 제시된 aggregate 생성 요건 충족함
+- **ORIGINAL**
+```cpp
+struct Aggregate1 {
+    int num;
+    double pi;
+};
+```
+- **Initialization**
+```cpp
+Aggregate1 a1 {2017, 3.14};
+```
+<details><summary>Another example</summary>
+<div markdown="1">
+
+- **ORIGINAL**
+```cpp
+struct Aggregate2 {
+    int num;
+    char hello[6];
+    int impYears[5];
+};
+```
+- **Initialization**
+```
+Aggregate2 a2 {42, {'h', 'e', 'l', 'l', 'o'}, {1998, 2003, 2011, 2014, 2017}};
+```
+</div>
+</details>
