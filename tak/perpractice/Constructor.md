@@ -72,3 +72,6 @@ a special class type where only one of the non-static data members is active at 
 UnionName unionObject;
 unionObject.member2 = value; // member2를 active member로 함
 ```
+
+## Where Would You Use a ***union***?
+- 유니온은 복잡한 자료형을 모델링할 때 구조체의 멤버처럼 쓰임
