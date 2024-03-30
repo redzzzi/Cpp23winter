@@ -95,6 +95,8 @@ int num2 = u1.num; // works, but u1 contained a double!
 <details><summary>cppreference Example Code</summary>
 <div markdown="1">
 
+<<<<<<< HEAD
+=======
 ```cpp
 #include <cassert>
 #include <iostream>
