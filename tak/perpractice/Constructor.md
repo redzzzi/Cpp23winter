@@ -41,7 +41,11 @@ int main() {
     pr1.Show();
     Practice pr2(100); // call constructor 2.
     pr2.Show();
+<<<<<<< HEAD
     Practice pr3(100, 200); // call constructor 3.
+=======
+    Practice pr2(100, 200); // call constructor 3.
+>>>>>>> b8ce9c6a74defb8db28043cd2a5d7483defbb837
     pr3.Show();
 
     return 0;
