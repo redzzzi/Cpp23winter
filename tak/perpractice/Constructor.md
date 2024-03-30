@@ -48,5 +48,6 @@ int main() {
 }
 ```
 </div>
+</details>
 
 # 1. Using Constructors to **Convert Types**
