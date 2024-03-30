@@ -52,3 +52,8 @@ int main() {
 </details>
 
 # 1. Using Constructors to **Convert Types**
+- ```Human anotherKid = 11```처럼 변수를 지정된 생성자의 이름으로 받을 수 있음
+    - 정수를 생성자로 받고, *implicit* conversion을 해줬기 때문
+    - Human이라는 객체를 생성하고 해당 정수를 함수의 인자로 받을 수 있게 해줌
+- *implicit* conversion을 적용하지 않으려면?
+    - ```explicit Human(int Age) {}```처럼 ```explicit``` 식별자를 붙여주면 됨
