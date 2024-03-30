@@ -75,3 +75,31 @@ unionObject.member2 = value; // member2를 active member로 함
 
 ## Where Would You Use a ***union***?
 - 유니온은 복잡한 자료형을 모델링할 때 구조체의 멤버처럼 쓰임
+
+# 3. ```std::variant``` As a Typesafe Alternative to a union
+```cpp
+union SimpleUnion {
+    int num;
+    double preciseNum;
+};
+``````
+- 해당 union을 예로 들자면, double로 쓸 수도, integer로 쓸 수도 있다!
+```cpp
+SimpleUnion u1;
+u1.preciseNum = 3.14; // union stores a double
+int num2 = u1.num; // works, but u1 contained a double!
+```
+
+- C++17은 union의 typesafe 대안으로 ```std::variant```를 제시함
+    - typesafe: 런타임 시 타입에 대한 문제로 에러가 발생하지 않도록 미리 조치
+```cpp
+variant<int, double> varSafe;
+varSafe = 3.14; // variant stores double
+double pi = get<double>(varSafe); // 3.14
+double pi2 = get<1>(varSafe); // 3.14
+get<char>(varSafe); // compile fails: variant with two types, not three try
+{
+    get<int>(varSafe); // throws exception as variant stores double
+}
+catch (bad_variant_access&) { // exception handler code}
+```
