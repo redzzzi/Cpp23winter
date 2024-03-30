@@ -197,3 +197,63 @@ Aggregate2 a2 {42, {'h', 'e', 'l', 'l', 'o'}, {1998, 2003, 2011, 2014, 2017}};
 ```
 </div>
 </details>
+
+## CAUTION
+```plaintext
+Aggregate initialization will initialize only
+the first non-static member of a union.
+```
+<details><summary>예를 들어 설명해보자!</summary>
+<div markdown="1">
+
+- some lines of LISTING 9.16
+```cpp
+union SimpleUnion {
+    int num;
+    char alphabet;
+};
+
+...
+
+int main() {
+    SimpleUnion u1, u2;
+    u1.num = 2100;
+    u2.alphabet = 'C';
+
+    ...
+}
+```
+The aggregate initialization of the unions declared
+in Listing 9.16 would be
+```cpp
+SimpleUnion u1{2100}, u2{'C'};
+// In u2, member num (int) is initialized to 'C' (ASCII67)
+// Although, you wished to initialize member alphabet (char)
+```
+```plaintext
+의도화 다른 초기화가 실행될 수 있기 때문에,
+해당 구문을 union에는 적용하지 않는 게 좋다.
+쓸거면 9.16처럼 사용하기!!
+```
+
+# 5. [`constexpr`](https://modoocode.com/293) with Classes and Objects
+- constant 또는 const-expression으로 만들어진 함수를 활용
+    - 컴파일러에게 해당 함수를 평가하고 결과 삽입하도록 함
+```plaintext
+The compiler would ignore constexpr
+when the function or class is used with entities that are not constant.
+컴파일 타임에 확실히 상수를 사용하고 싶다 -> constexpr
+cf) const: 런타임에 상수 확인
+```
+## `const`와 `constexpr` [차이점](https://m.blog.naver.com/dlcksgod1/221204397624)
+```cpp
+constexpr int max = 100;
+
+void use(int n) {
+    constexpr int c1 = max + 7; // OK: c1 is 107 -> 컴파일타임에 max 값 확정돼있음(constexpr)
+    constexpr int c2 = n + 7; // error: we don't know the value of c2 in compile time
+    const int c3 = n + 7; // OK: but don't try to change the value of c3
+    const int c4; // error: const requires initializer
+    c3 = 4; // error: we can't change the value of const variable after initialization
+}
+```
