@@ -57,3 +57,18 @@ int main() {
     - Human이라는 객체를 생성하고 해당 정수를 함수의 인자로 받을 수 있게 해줌
 - *implicit* conversion을 적용하지 않으려면?
     - ```explicit Human(int Age) {}```처럼 ```explicit``` 식별자를 붙여주면 됨
+
+# 2. **union**: A Special Data Storage Mechanism
+## What is ***union***?
+```
+a special class type where only one of the non-static data members is active at a time
+```
+- union은 클래스처럼 다양한 멤버 변수를 받을 수 있음
+    - 예외적으로, **한 가지 변수만 실제로 사용될 수 있음**
+- ```struct```와 비슷하게, ```union```의 멤버들은 *public*임
+- 하지만, ```struct```와 다르게 ```union```은 상속 구조를 가질 수 없음 
+- union의 ```sizeof()```는 union에 있는 **가장 큰 멤버의 사이즈**임 (해당 변수가 inactive더라도)
+```cpp
+UnionName unionObject;
+unionObject.member2 = value; // member2를 active member로 함
+```
