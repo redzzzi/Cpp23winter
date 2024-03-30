@@ -235,6 +235,8 @@ SimpleUnion u1{2100}, u2{'C'};
 해당 구문을 union에는 적용하지 않는 게 좋다.
 쓸거면 9.16처럼 사용하기!!
 ```
+</div>
+</details>
 
 # 5. [`constexpr`](https://modoocode.com/293) with Classes and Objects
 - constant 또는 const-expression으로 만들어진 함수를 활용
