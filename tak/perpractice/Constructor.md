@@ -259,3 +259,60 @@ void use(int n) {
     c3 = 4; // error: we can't change the value of const variable after initialization
 }
 ```
+
+# The Concept of [Classes](https://en.wikipedia.org/wiki/Class_(computer_programming)) and [Objects](https://en.wikipedia.org/wiki/Object_(computer_science))
+- class
+    - object를 생성하기위한 확장성있는 코드 템플릿
+    - 멤버 변수에 초기 값을 설정
+    - 멤버 함수 또는 메소드 실행
+```plaintext
+클래스의 생성자로 만들어진 object를 클래스의 instance라고 부른다.
+그리고 object와 관련된 멤버 변수를 instance variable이라고 한다.
+```
+```cpp
+class Human {
+    // Data attributes:
+    string Name;
+    string DateOfBirth;
+    string PlaceOfBirth;
+    string Gender;
+
+    // Methods:
+    void Talk(string TextToTalk);
+    void IntroduceSelf();
+    ...
+};
+```
+```plaintext
+Methods are essentially functions
+that are "members of a class."
+```
+## Instantiating an Object of a Class
+- 휴먼 클래스로 객체 생성 예시는 다른 자료형으로 인스턴스를 생성하는 원리와 비슷하다.
+```cpp
+double Pi = 3.1415; // 지역 변수로 선언된 double 자료형. (스택에)
+Human Tom; // 지역 변수로 선언된 Human 클래스의 객체
+```
+- `new` 식별자를 사용하는 것처럼 휴먼 클래스의 인스턴스에 동적할당을 할 수 있다.
+```cpp
+int* pNumber = new int; // free store에 정수가 동적할당
+delete pNumber; // 메모리 할당 해제
+```
+## 포인터로 멤버 접근하기
+```cpp
+Human* pTom = new Human();
+(*pTom).IntroduceSelf();
+```
+## `->` 연산자로 멤버 접근하기
+```cpp
+Human* pTom = new Human();
+pTom->DateOfBirth="1970";
+pTom->IntroduceSelf();
+delete pTom;
+
+// 포인터가 있을 때 대신 쓸 수 있는 방법
+Human Tom;
+Human* pTom = &Tom; // 참조 연산자 &를 사용해 주소 할당
+pTom->DateOfBirth="1970"; // Tom.DateOfBirth="1970";과 같음
+pTom->IntroduceSelf(); // Tom.IntroduceSelf();와 같음
+```
