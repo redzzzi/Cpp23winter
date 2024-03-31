@@ -51,14 +51,14 @@ int main() {
 </div>
 </details>
 
-# 1. Using Constructors to **Convert Types**
+# Using Constructors to **Convert Types**
 - ```Human anotherKid = 11```처럼 변수를 지정된 생성자의 이름으로 받을 수 있음
     - 정수를 생성자로 받고, *implicit* conversion을 해줬기 때문
     - Human이라는 객체를 생성하고 해당 정수를 함수의 인자로 받을 수 있게 해줌
 - *implicit* conversion을 적용하지 않으려면?
     - ```explicit Human(int Age) {}```처럼 ```explicit``` 식별자를 붙여주면 됨
 
-# 2. **union**: A Special Data Storage Mechanism
+# **union**: A Special Data Storage Mechanism
 ## What is ***union***?
 ```
 a special class type where only one of the non-static data members is active at a time
@@ -76,7 +76,7 @@ unionObject.member2 = value; // member2를 active member로 함
 ## Where Would You Use a ***union***?
 - 유니온은 복잡한 자료형을 모델링할 때 구조체의 멤버처럼 쓰임
 
-# 3. ```std::variant``` As a Typesafe Alternative to a union
+# ```std::variant``` As a Typesafe Alternative to a union
 ```cpp
 union SimpleUnion {
     int num;
@@ -153,7 +153,7 @@ get<char>(varSafe); // compile fails: variant with two types, not three try
 catch (bad_variant_access&) { // exception handler code}
 ```
 
-# 4. Using Aggregate Initialization on Classes and Structs
+# Using Aggregate Initialization on Classes and Structs
 - *aggregate initialization* syntax
 ```cpp
 Type objectName = {argument1, ..., argmentN};
@@ -238,7 +238,7 @@ SimpleUnion u1{2100}, u2{'C'};
 </div>
 </details>
 
-# 5. [`constexpr`](https://modoocode.com/293) with Classes and Objects
+# [`constexpr`](https://modoocode.com/293) with Classes and Objects
 - constant 또는 const-expression으로 만들어진 함수를 활용
     - 컴파일러에게 해당 함수를 평가하고 결과 삽입하도록 함
 ```plaintext
