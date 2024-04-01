@@ -59,3 +59,6 @@ int main() {
 
   return 0;
 }
+
+// f()
+// f: object, (): operator -> We need operator-overloading.
