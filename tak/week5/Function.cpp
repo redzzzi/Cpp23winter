@@ -1,5 +1,6 @@
 #include <iostream>
 #include <functional>
+#include <vector>
 
 using namespace std;
 
@@ -10,6 +11,10 @@ double Area(double R, int H);
 double Area(int R, double H);
 double Area(int R, int H);
 */
+
+void DisplayElementFnc(int element) {
+  cout << element << endl;
+}
 
 // define an inline function
 inline long DoubleNum(int InputNum) { // inline doesn't use STACK.
@@ -36,7 +41,21 @@ int main() {
   auto f1 = [](int x, int y) { return x + y; }; // auto is automatically assigning its type.
 
   // Assign the same lambda expression to a function object
-  function<int (int, int)> = [](int x, int y) { return x + y; };
+  // function<int (int, int)> f2 = [](int x, int y) { return x + y; };
+
+  int i = 3;
+  int j = 5;
  
+  function<int (void)> f = [i, &j] { return i + j;};
+  // when you want to use the updated value, you can use reference &.
+  cout << f() << endl;
+  i = 22;
+  j = 44;
+  cout << f() << endl; // 3 + 44
+  cout << f1(21, 12) << endl; // Lambda func can call another Lambda func.
+  
+  int m = [](int x) { return [](int y) { return y * 2; }(x) + 3;}(5);
+  cout << m << endl;
+
   return 0;
 }
