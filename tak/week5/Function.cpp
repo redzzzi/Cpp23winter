@@ -72,6 +72,8 @@ int main() {
     vecIntegers.push_back(i);
   for_each(vecIntegers.begin(), vecIntegers.end(), DisplayElementFunc);
   cout << endl << endl;
+  for_each(vecIntegers.begin(), vecIntegers.end(), DisplayElement<int>());
+  cout << endl << endl;
 
   return 0;
 }
