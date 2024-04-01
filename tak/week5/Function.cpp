@@ -75,6 +75,10 @@ int main() {
   for_each(vecIntegers.begin(), vecIntegers.end(), DisplayElement<int>());
   cout << endl << endl;
 
+  // Use Lambda func
+  for_each(vecIntegers.begin(), vecIntegers.end(), [](int element){ cout << element << ' ';});
+  cout << endl << endl;
+
   return 0;
 }
 
