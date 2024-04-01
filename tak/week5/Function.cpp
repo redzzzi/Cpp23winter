@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 
 using namespace std;
 
@@ -31,6 +32,11 @@ int main() {
 
   int n = [](int x, int y) { return x + y; }(5, 4); // Lambda function. nameless.
   cout << n << endl;
+
+  auto f1 = [](int x, int y) { return x + y; }; // auto is automatically assigning its type.
+
+  // Assign the same lambda expression to a function object
+  function<int (int, int)> = [](int x, int y) { return x + y; };
  
   return 0;
 }
