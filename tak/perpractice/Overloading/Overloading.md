@@ -13,6 +13,28 @@
 즉, 함수의 오버로딩은 서로 다른 시그니처를 갖는 여러 함수를
 같은 이름으로 정의하는 것이라 할 수 있다.
 ```
+<details><summary>잘못 사용한 예</summary>
+<div markdown="1">
 
+```cpp
+void Shift(int, int);
+void Shift(int, int, int);
+void Shift(int, int, int, int);
+
+int main(){
+    Shift(1, 2);
+    Shift(1, 2, 3);
+    Shift(1, 2, 3, 4);
+
+    return 0;
+}
+```
+```plaintext
+// OUTPUT
+2, 1
+2, 3, 1
+2, 3, 4, 1
+```
+</div></details>
 # 연산자 오버로딩
 
