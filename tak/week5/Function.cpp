@@ -13,8 +13,16 @@ double Area(int R, int H);
 */
 
 void DisplayElementFnc(int element) {
-  cout << element << endl;
+  cout << element << ' ';
 }
+
+// struct the behaves as a unary function
+template<typename elementType>
+struct DisplayElement {
+  void operator () (const elementType element) {
+    cout << element << ' ';
+  }
+};
 
 // define an inline function
 inline long DoubleNum(int InputNum) { // inline doesn't use STACK.
@@ -56,6 +64,11 @@ int main() {
   
   int m = [](int x) { return [](int y) { return y * 2; }(x) + 3;}(5);
   cout << m << endl;
+
+  vector<int> vecIntegers;
+
+  for (int i=0; i<10; ++i)
+    vecIntegers.push_back(i);
 
   return 0;
 }
