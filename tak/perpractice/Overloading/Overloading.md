@@ -49,4 +49,24 @@ int main(){
 ```cpp
 operator오버로딩할연산자(매개변수목록)
 ```
-- 장점: 
+- 장점: **복잡한 함수 이름 대신에** 간편하게 연산자를 사용할 수 있다.
+- 예제
+    - `-`를 두 Position 객체 사이의 중간 좌표를 구하는 연산으로 오버로딩하여 사용하고 있다.
+    - 아래 연산자 오버로딩이 쓰이지 않았다면 뺄셈 연산은 적용이 안될 것이며 오류가 날 것이다.
+```cpp
+// 두 지점의 중간 지점의 좌표를 구하는 예제
+Position Position::operator-(const Position& other){
+    return Position((x_ + other.x_)/2, (y_ + other.y_)/2);
+}
+```
+
+### 연산자 함수의 정의 방법
+1. 클래스의 멤버 함수로 정의하는 방법
+2. 전역 함수로 정의하는 방법
+```cpp
+// 전역 함수로 정의한 예제
+Position operator-(const Position& pos1, const Position& pos2){
+    return Poisition((pos1.x_ + pos2.x_)/2,, (pos1.y_ + pos2.y_)/2);
+}
+```
+- 전역 함수는 **private 멤버**인 <ins>x_</ins>와 <ins>y_</ins>에 접근하지 못하므로, `friend` 키워드를 사용하여 프렌드 함수로 선언하고 있다.
