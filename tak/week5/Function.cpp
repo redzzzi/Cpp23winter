@@ -1,6 +1,7 @@
 #include <iostream>
 #include <functional>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ double Area(int R, double H);
 double Area(int R, int H);
 */
 
-void DisplayElementFnc(int element) {
+void DisplayElementFunc(int element) {
   cout << element << ' ';
 }
 
@@ -69,6 +70,8 @@ int main() {
 
   for (int i=0; i<10; ++i)
     vecIntegers.push_back(i);
+  for_each(vecIntegers.begin(), vecIntegers.end(), DisplayElementFunc);
+  cout << endl << endl;
 
   return 0;
 }
