@@ -18,14 +18,18 @@ public:
     Age = HumanAge;
   }
   */
-  Human(string HumanName, int HumanAge = 24) {
+  Human(string HumanName = "Aimyong", int HumanAge = 24) {
     Name = HumanName;
     Age = HumanAge;
+  }
+  ~Human() {
+    cout << "Destructor is called ..." << endl;
   }
 };
 
 int main() {
   cout << "Hello world!" << endl;
+  Human Aimyong;
   // Human Eve(21); // Compiler Automatically Human().
   // Human Tom;
   // Human Ive("Ive", 21);
