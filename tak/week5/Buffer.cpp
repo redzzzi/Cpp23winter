@@ -1,41 +1,34 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
 class MyString {
 private:
-  char* Buffer;
+  string Buffer;
 public:
-  MyString(const char* InitialInput) {
-    if (InitialInput != NULL)
-      Buffer = new char[strlen(InitialInput) + 1];
-      strcpy(Buffer, InitialInput);
-    else
-      Buffer = NULL;
-    ~MyString() {
-      if (Buffer != NULL)
-        delete [] Buffer;
-    }
-    int GetLength() {
-      return strlen(Buffer);
-    }
-    const char * GetString() {
-      return Buffer;
-    }
+  MyString(string InitialInput) {
+    cout << "Constructor: creating new MyString " << endl;
+    Buffer = InitialInput;
+    cout << "Buffer points to: " << (void *)&Buffer[0] << hex;
+    cout << (unsigned int*)Buffer << endl;
   }
+  
+  ~MyString() {
+    cout << "Invoking destructor, clearing up" << endl;
+  } // string class automatically add pointer
 };
 
 void useMyString(MyString Input) {
-  cout << "String buffer in MyString: " << Input.GetString() << endl;
+  cout << "String buffer in MyString: " << (void *)&Input.Buffer[0] << endl;
+  cout << "Buffer contains " << Input.Buffer.c_str() << endl;
+
   return;
 }
 
 int main() {
   cout << "Hello World!" << endl;
   MyString SayHello("Hello from MyString Class");
-  cout << "Length: " << SayHello.GetLength() << endl;
-  cout << "Message: " << SayHello.GetString() << endl;
   useMyString(SayHello);
 
   return 0;
