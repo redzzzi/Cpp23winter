@@ -61,6 +61,14 @@ int main() {
   varSafe = 3.14;
 
   double pi = get<double>(varSafe);
+  double pi2 = get<1>(varSafe);
+  // wrong examples
+  // get<char>(varSafe);
+  // get<2>(varSafe);
+
+  try {
+    get<int>(varSafe);
+  } catch (bad_variant_access& e) {}
 
   return 0;
 }
