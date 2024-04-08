@@ -60,5 +60,7 @@ int main() {
   variant<int, double> varSafe; // this is template.
   varSafe = 3.14;
 
+  double pi = get<double>(varSafe);
+
   return 0;
 }
