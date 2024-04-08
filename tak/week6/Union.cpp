@@ -1,4 +1,5 @@
 #include <iostream>
+#include <variant>
 
 using namespace std;
 
@@ -55,6 +56,9 @@ int main() {
   SimpleUnion2 myU1;
   myU1.preciseNum = 3.14;
   int num2 = myU1.num;
+
+  variant<int, double> varSafe; // this is template.
+  varSafe = 3.14;
 
   return 0;
 }
