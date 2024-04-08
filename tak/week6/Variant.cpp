@@ -15,5 +15,11 @@ int main() {
     cout << e.what() << endl;
     cout << "Try yo access int..." << endl;
   }
+  try {
+    double pi = get<double>(varSafe);
+  } catch(const bad_variant_access& e) {
+    cout << e.what() << endl;
+    cout << "Try yo access double..." << endl;
+  }
   return 0;
 }
