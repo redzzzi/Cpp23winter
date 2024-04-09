@@ -2,3 +2,6 @@
 - hw4: `create a new arr2[] from the heap`
 https://stackoverflow.com/questions/675817/how-do-i-create-an-array-in-c-which-is-on-the-heap-instead-of-the-stack
 
+# copy an array
+- hw4: `copy arr[] into arr2[]`
+https://www.quora.com/How-do-I-copy-an-array-in-C
