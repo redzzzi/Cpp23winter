@@ -5,3 +5,7 @@ https://stackoverflow.com/questions/675817/how-do-i-create-an-array-in-c-which-i
 # copy an array
 - hw4: `copy arr[] into arr2[]`
 https://www.quora.com/How-do-I-copy-an-array-in-C
+
+# find minimum value from vector
+- hw4: for sorting process
+https://stackoverflow.com/questions/13015932/how-to-find-minimum-value-from-vector
