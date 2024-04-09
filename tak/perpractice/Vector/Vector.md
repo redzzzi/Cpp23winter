@@ -6,7 +6,6 @@
 - hw4: `copy arr[] into arr2[]`
 - https://www.quora.com/How-do-I-copy-an-array-in-C
 
-# find minimum value from vector
+# find minimum value from array
 - hw4: for sorting process
-- from GeeksforGeeks: https://www.geeksforgeeks.org/how-to-find-minimum-element-in-vector-in-cpp/
-- https://stackoverflow.com/questions/13015932/how-to-find-minimum-value-from-vector
+- - https://stackoverflow.com/questions/13015932/how-to-find-minimum-value-from-vector
