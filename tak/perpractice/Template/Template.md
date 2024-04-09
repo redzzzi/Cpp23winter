@@ -89,3 +89,18 @@ public:
     }
 };
 ```
+
+## 부분 특수화
+- 두 개 이상의 템플릿 인수 중 일부만 특수화
+- `< >`에서 특수화하지 않는 타입의 템플릿 인수를 명시하고, 그 다음 특수화하는 타입을 명시한다.
+- 예제: 클래스 템플릿 X를 double형에 대해 부분 특수화
+    - 아래 코드에서 <ins>T1 타입까지 특수화</ins>하면, **명시적 특수화**를 할 수 있다.
+```cpp
+template <typename T1> class X<T1, double> { ... };
+```
+
+### **typedef** 키워드를 이용한 템플릿 특수화
+```cpp
+typedef X<double, 3.14> DoubleX;
+DoubleX double_x; // double_x는 X<double, 3.14> 타입임.
+```
