@@ -8,4 +8,8 @@
 
 # find minimum value from array
 - hw4: for sorting process
-- - https://stackoverflow.com/questions/13015932/how-to-find-minimum-value-from-vector
+- https://stackoverflow.com/questions/13015932/how-to-find-minimum-value-from-vector
+
+# add element to array
+- hw4: insert the min into arr2[i];
+- https://stackoverflow.com/questions/755835/how-to-add-element-to-c-array
