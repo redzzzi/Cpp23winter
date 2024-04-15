@@ -9,7 +9,9 @@ int main() {
 
   int age;
   cin >> age;
-  const int userAge = age;
+  // const int userAge = age; // 런타임에서 결정이 된다.
+  const int userAge(age);
+  // constexpr int userAge = age; // 컴파일에서 결정이 된다.
   cout << userAge;
 
   return 0;
