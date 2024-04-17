@@ -3,9 +3,10 @@
 using namespace std;
 
 class Fish {
-public:
+protected: // accessible only to derived classes
   bool FreshWaterFish;
   
+public:
   void swim() {
     if (FreshWaterFish)
       cout << "Swim in the lake" << endl;
@@ -35,6 +36,7 @@ int main() {
 
   myLunch.swim();
   myDinner.swim();
+  // myLunch.FreshWaterFish = false; // protected member is not accessible from outside the class hierarchy
 
   return 0;
 }
