@@ -15,6 +15,7 @@ public:
   }
 };
 
+<<<<<<< HEAD
 class Utility {
 public:
   static void DisplayAge(const Human& Person) {
@@ -22,6 +23,8 @@ public:
   }
 };
 
+=======
+>>>>>>> bd968b9de7971202d1e36648d2318720f1a56fea
 void DisplayAge(const Human& Person) {
   cout << Person.Age << endl;
 }
@@ -30,7 +33,10 @@ int main() {
   cout << "Hello world!" << endl;
   Human Tom("Tom", 25);
   DisplayAge(Tom);
+<<<<<<< HEAD
   Utility::DisplayAge(Tom);
+=======
+>>>>>>> bd968b9de7971202d1e36648d2318720f1a56fea
 
   return 0;
 }
