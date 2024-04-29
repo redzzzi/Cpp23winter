@@ -26,9 +26,8 @@ int main() {
 
   printf("address: %p\n", (void*)(p1_p1->*fp1));
   printf("address: %p\n", (void*)(p1_p2->*fp1));
-
-  printf("address: %p\n", (void*)(p1_p1->*fp1));
-  printf("address: %p\n", (void*)(p1_p2->*fp1));
+  printf("address: %p\n", (void*)(p2_p1->*fp2));
+  printf("address: %p\n", (void*)(p2_p2->*fp2));
 
   // execution code -> TEXT SEGMENT 위치 -> read-only
   // 지역 변수는 writable 할 수 있어야 한다. -> STACK SEGMENT
