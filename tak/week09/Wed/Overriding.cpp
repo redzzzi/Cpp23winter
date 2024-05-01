@@ -53,5 +53,9 @@ int main() {
   c->show3();
   c->show4();
 
+  cc->show3();
+  cc->show();
+  cc->show2();
+
   return 0;
 }
