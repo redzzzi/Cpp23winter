@@ -5,16 +5,22 @@ using namespace std;
 class Parent {
 public:
   void show() { cout << "This is Parent." << endl; }
+  /*
+  void show(int a) {
+    cout << "a: " << a << endl;
+  }
+  */
 };
 
 class Child: Parent {
 public:
-  void show() { cout << "This is Child." << endl; }
+  virtual void show() { cout << "This is Child." << endl; }
+
 };
 
 class ChildChild: Child {
 public:
-  void show() { cout << "This is ChildChild." << endl; }
+  virtual void show() { cout << "This is ChildChild." << endl; }
 };
 
 int main() {
@@ -26,6 +32,16 @@ int main() {
   // p->show(); c->show(); cc->show(); // STEP 1
   // OVERRIDING
   // While compiler is parsing the building, Function Binding will happen.
+
+  p = c;
+  p->show();
+  p = cc;
+  p->show();
+
+  /*
+  c->show();
+  c->show(10); // error. integer hidden
+  */
 
   return 0;
 }
