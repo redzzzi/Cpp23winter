@@ -10,15 +10,18 @@ public:
     cout << "a: " << a << endl;
   }
   */
+  virtual void show2() { cout << "This is Parent show2." << endl; }
+  virtual void show3() { cout << "This is Parent show3." << endl; }
+  virtual void show4() { cout << "This is Parent show4." << endl; }
 };
 
-class Child: Parent {
+class Child: public Parent {
 public:
   virtual void show() { cout << "This is Child." << endl; }
-
+  virtual void show2() { cout << "This is Child2." << endl; }
 };
 
-class ChildChild: Child {
+class ChildChild: public Child {
 public:
   virtual void show() { cout << "This is ChildChild." << endl; }
 };
@@ -33,15 +36,22 @@ int main() {
   // OVERRIDING
   // While compiler is parsing the building, Function Binding will happen.
 
+  /*
   p = c;
   p->show();
   p = cc;
   p->show();
+  */
 
   /*
   c->show();
   c->show(10); // error. integer hidden
   */
+
+  p->show();
+  c->show();
+  c->show3();
+  c->show4();
 
   return 0;
 }
