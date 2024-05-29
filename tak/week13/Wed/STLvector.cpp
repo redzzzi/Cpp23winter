@@ -30,6 +30,15 @@ int main() {
   for (size_t i=0; i<vecIntegerArray.size(); ++i) {
     cout << "E[" << i << "] = " << vecIntegerArray[i] << endl;
   }
+
+  vecIntegerArray[2] = 2011;
+  cout << vecIntegerArray[2] << endl;
+
+  cout << endl;
+  vecIntegerArray.pop_back();
+  for (size_t i=0; i<vecIntegerArray.size(); ++i) {
+    cout << "E[" << i << "] = " << vecIntegerArray[i] << endl;
+  }
   
   return 0;
 }
