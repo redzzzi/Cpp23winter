@@ -111,6 +111,7 @@ int main() {
 
   // DO NOT BELOW DO NOT BELOW DO NOT BELOW DO NOT BELOW DO NOT BELOW DO NOT BELOW DO NOT BELOW
   // I want to change element values in the set.
+  /*
   int x = 10;
   const int* y = &x;
   int *z;
@@ -135,6 +136,7 @@ int main() {
   for (const int& x: mySet) {
     cout << x << endl;
   }
+  */
 
   return 0;
 }
