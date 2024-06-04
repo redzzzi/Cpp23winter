@@ -1,4 +1,4 @@
-// WITH virtual destructor
+// WITHOUT virtual destructor
 //
 // Need for Virtual Destructors
 // (1) new를 사용하여 free store에서 초기화된 deriving 클래스의 소멸자 코드는
@@ -6,8 +6,6 @@
 //     --> Destroyed Fish만 출력되고 Destroyed Tuna는 출력되지 않는다.
 // (2) 이런 코드는 릴리즈되지 않거나, 메모리 누수 등을 일으킬 수 있다.
 // (3) 따라서 virtual destructor!를 사용하자
-
-// 포인터로 delete 할 때도 이제는 파생클래스의 소멸자가 작동된다.
 #include <iostream>
 using namespace std;
 
@@ -16,7 +14,7 @@ public:
   Fish() {
     cout << "Constructed Fish" << endl;
   }
-  virtual ~Fish() {
+  ~Fish() {
     cout << "Destroyed Fish" << endl;
   }
 };
@@ -50,9 +48,6 @@ int main() {
   return 0;
 }
 
-// 생성자 : 기본 -> 파생 순서
-// 소멸자 : 파생 -> 기본 순서
-
 /*
 OUTPUT
 -----------
@@ -60,7 +55,6 @@ Allocating a Tuna no the free store:
 Constructed Fish
 Constructed Tuna
 Deleting the Tuna:
-Destroyed Tuna
 Destroyed Fish
 Instantiating a Tuna on the stack:
 Constructed Fish
