@@ -26,8 +26,8 @@ struct PredicateIgnoreCase {
   }
 };
 
-template<typename T>
-void output(const T& table) { // 원래는 const auto&인데 에러나서 템플릿 사용하는 방식으로 함.
+// template<typename T>
+void output(const auto& table) { // 원래는 const auto&인데 에러나서 템플릿 사용하는 방식으로 함.
   for (auto const& [key, val]: table) {
     cout << key << "-> " << val << endl;
   }
