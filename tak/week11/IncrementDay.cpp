@@ -22,7 +22,7 @@ public:
   }
   Date operator ++(int) {
     Date Copy(D, M, Y); // this->D, this->M, this->Y
-    ++D;
+    D++;
     return Copy;
   }
   friend ostream& operator << (ostream& os, const Date& myH); // operator <<를 멤버 메소드로 쓰고 싶지 않으면 std::ostream 쓰기

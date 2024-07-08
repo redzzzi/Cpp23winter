@@ -24,10 +24,19 @@ int main() {
   void (A::*fp1)() = &A::setHappy;
   void(subA::*fp2)() = &subA::setAngry; 
 
-  printf("address: %p\n", (void*)(p1_p1->*fp1));
-  printf("address: %p\n", (void*)(p1_p2->*fp1));
-  printf("address: %p\n", (void*)(p2_p1->*fp2));
-  printf("address: %p\n", (void*)(p2_p2->*fp2));
+  (p1_p1->*fp1)();
+  (p1_p2->*fp1)();
+  (p2_p1->*fp1)(); // A의 setHappy 호출
+  (p2_p2->*fp1)(); // A의 setHappy 호출
+
+  // 멤버 함수 포인터의 주소는 출력 불가능하지만, 주소를 비교할 수는 있다
+  cout << "fp1 address comparison: " << (fp1 == &A::setHappy) << endl;
+  cout << "fp2 address comparison: " << (fp2 == &subA::setAngry) << endl;
+
+  delete p1_p1;
+  delete p1_p2;
+  delete p2_p1;
+  delete p2_p2;
 
   // execution code -> TEXT SEGMENT 위치 -> read-only
   // 지역 변수는 writable 할 수 있어야 한다. -> STACK SEGMENT

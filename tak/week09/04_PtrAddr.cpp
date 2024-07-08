@@ -9,9 +9,9 @@ public:
   char a;
 
   A() {
-    printf("address: %p\n", &n);
-    printf("address: %p\n", &i);
-    printf("address: %p\n", &a);
+    printf("(1) address: %p\n", &n);
+    printf("(2) address: %p\n", &i);
+    printf("(3) address: %p\n", &a);
   }
   void m1() {}
 };
@@ -20,7 +20,7 @@ class DerivedA: public A {
 public:
   int j;
   DerivedA() {
-    printf("address: %p\n", &j);
+    printf("(4) address: %p\n", &j);
   }
   void m2() {}
 };

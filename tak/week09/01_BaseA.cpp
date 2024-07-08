@@ -28,7 +28,7 @@ int main() {
   // due to the inheritance relationship
   // between a base class and its derived class
 
-  // myDeriveA.Swim(true); // 에러가 난다. Problem: Base 클래스가 메소드를 숨기려 하기 때문이다.
+  myDeriveA.Swim(true); // 에러가 난다. Problem: Base 클래스가 메소드를 숨기려 하기 때문이다.
   myDeriveA.BaseA::Swim(true); // Solution 1  
   
   return 0;
