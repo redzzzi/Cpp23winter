@@ -33,8 +33,8 @@ void judge(int bae) {
 }
 
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
   int x1, x2, x3, x4;
   for (int i = 0; i < 3; i++) {
     cin >> x1 >> x2 >> x3 >> x4;
