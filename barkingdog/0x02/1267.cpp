@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int Y, M;
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
@@ -9,7 +10,7 @@ int main() {
   int N;
   cin >> N;
   vector<int> min(N, 0);
-  int Y = 0, M = 0;
+  // int Y = 0, M = 0;
   for (int i=0; i<N; i++) cin >> min[i];
   
   for (int i: min) {
