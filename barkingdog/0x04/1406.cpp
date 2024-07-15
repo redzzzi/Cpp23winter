@@ -8,33 +8,32 @@ int main() {
 
   string word;
   cin >> word;
-  string::iterator cursor = word.end();
+  list<char> lst;
+  for (auto c : word) lst.push_back(c);
+  auto cursor = lst.end();
+
   int num;
   cin >> num;
+
   for (int i=0; i<num; i++) {
     char com;
     cin >> com;
     if (com == 'P') {
       char sig;
       cin >> sig;
-      word.insert(cursor, sig);
-      cursor++;
-      // cout << word << '\n';
+      lst.insert(cursor, sig);
     }
     else if (com == 'L') {
-      if (cursor != word.begin()) cursor--;
-      // cout << word << '\n';
+      if (cursor != lst.begin()) cursor--;
     }
     else if (com == 'D') {
-      if (cursor != word.end()) cursor++;
-      // cout << word << '\n';
+      if (cursor != lst.end()) cursor++;
     } else {
-      if (cursor != word.begin()) {
+      if (cursor != lst.begin()) {
         cursor--;
-        cursor = word.erase(cursor);
-        // cout << word << '\n';
+        cursor = lst.erase(cursor);
       }
     }
   }
-  cout << word;
+  for (auto c : lst) cout << c;
 }
