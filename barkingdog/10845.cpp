@@ -23,7 +23,7 @@ int main() {
     else if (com == "pop") {
       if (Que.empty()) cout << -1 << '\n';
       else {
-        cout << Que.back() << '\n';
+        cout << Que.front() << '\n';
         Que.pop();
       }
     }
