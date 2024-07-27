@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
   int size, x, ans = 0;
   cin >> size;
   int nums[size];
@@ -11,14 +13,21 @@ int main() {
   cin >> x;
   sort(nums, nums+size);
 
-  // for (int k : nums) cout << k << '\n';
+  int k=0;
+  bool no_more = false;
   for (int i=0; i<size; i++) {
     for (int j=i+1; j<size; j++) {
+      if (nums[i] + nums[j] > x) {
+        break;
+        no_more = true;
+      }
       if (nums[i] + nums[j] == x) {
         ans++;
-        // cout << '(' << nums[i] << ", " << nums[j] << ')' << '\n';
+        break;
       }
+      // cout << '(' << nums[i] << ", " << nums[j] << ')' << '\n';
     }
+    if (no_more) break;
   }
 
   cout << ans;
