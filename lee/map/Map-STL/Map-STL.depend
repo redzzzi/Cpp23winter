@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1732524338 source:c:\users\user\내 드라이브\lectures\data structures\sample\map\map-stl\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<map>
+	<ctime>
+

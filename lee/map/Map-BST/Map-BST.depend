@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1732523748 source:c:\users\user\내 드라이브\lectures\data structures\sample\map\map-bst\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<ctime>
+
