@@ -24,7 +24,7 @@ int main() {
     vector<myPair> myVector;
     vector<myPair>::iterator it;
 
-    string  filename="students-1m.prn";
+    string  filename="students-1M.prn";
     ifstream file(filename);
 
     if (!file.is_open()) {
