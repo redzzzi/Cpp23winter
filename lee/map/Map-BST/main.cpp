@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -86,12 +87,13 @@ public:
 
 // Main function
 int main() {
+  auto start = chrono::high_resolution_clock::now();
 
     clock_t before = clock();
 
     BST*  tree=new BST();
 
-    string  filename="students-1m.prn";
+    string  filename="students-1M.prn";
     ifstream file(filename);
 
     if (!file.is_open()) {
@@ -132,6 +134,11 @@ int main() {
 
     duration = clock() - before;
     cout << "Searching(BST): " << (float)duration / CLOCKS_PER_SEC << " seconds";
+
+  auto end = chrono::high_resolution_clock::now();
+  auto exectime = chrono::duration<double>(end - start);
+
+  cout << '\n' << "Execution time: " << exectime.count() << " seconds" << '\n';
 
     return 0;
 }
