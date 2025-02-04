@@ -31,5 +31,22 @@
 </p>
 
 # 퀵 정렬
+- 정의: 기준값<sup>pivot</sup>을 선정해 해당 값보다 작은 데이터와 큰 데이터로 분류하는 것을 반복해 정렬하는 알고리즘
+  - pivot을 중심으로 계속 데이터를 *2개의 집합*으로 나누면서 정렬
+```
+💡 기준값 선정 방식이 시간 복잡도에 많은 영향을 줌
+```
+- 시간 복잡도
+  - 평균: **O(nlogn)**
+  - 최악: **O(n<sup>2</sup>)**
+ 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cdb359b7-654e-4600-a31b-514911516de8" style="width: 700px">
+</p>
+
+
 # 병합 정렬
 # 기수 정렬
+
+---
+이미지 출처: Geeks for Geeks
