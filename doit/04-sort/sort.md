@@ -5,6 +5,7 @@
   - [퀵<sup>quick</sup>](#퀵-정렬)
   - [병합<sup>merge</sup>](#병합-정렬)
   - [기수<sup>radix</sup>](#기수-정렬)
+  - [계수<sup>counting</sup>](#계수-정렬)
  
 
 - [분할 정복](https://ko.wikipedia.org/wiki/%EB%B6%84%ED%95%A0_%EC%A0%95%EB%B3%B5_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)<sup>Divide and Conquer</sup> 알고리즘: 그대로 해결할 수 없는 문제를 **작은 문제로 분할하여** 문제를 해결하는 방법이나 알고리즘
@@ -70,6 +71,10 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4af55979-6c9b-44e3-ba93-fa958db40dbc" style="width: 700px">
 </p>
+
+# 계수 정렬
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0566beec-8652-46f6-a4c7-ec3ca91a211c" style="width: 700px"></p>
 
 ---
 <a name="quick-sort">1</a> 출처: https://gmlwjd9405.github.io/<br>
