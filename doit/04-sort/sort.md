@@ -43,6 +43,7 @@
 # 퀵 정렬
 - 정의: 기준값<sup>pivot</sup>을 선정해 해당 값보다 작은 데이터와 큰 데이터로 분류하는 것을 반복해 정렬하는 알고리즘
   - pivot을 중심으로 계속 데이터를 *2개의 집합*으로 나누면서 정렬
+- 상세 설명된 블로그👍<sup>[1](#quick-sort)</sup>: https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html
 ```
 💡 기준값 선정 방식이 시간 복잡도에 많은 영향을 줌
 ```
@@ -59,4 +60,5 @@
 # 기수 정렬
 
 ---
+<a name="quick-sort">1</a> 출처: https://gmlwjd9405.github.io/
 이미지 출처: Geeks for Geeks
