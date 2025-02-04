@@ -55,10 +55,22 @@
   <img src="https://github.com/user-attachments/assets/cdb359b7-654e-4600-a31b-514911516de8" style="width: 700px">
 </p>
 
-
 # 병합 정렬
+- 정의: 데이터를 분할하고 분할한 집합을 *정렬하며 합치는* 알고리즘
+- 시간 복잡도: **O(nlogn)** ⭐
+
+<p align="center"><img src="https://github.com/user-attachments/assets/e4644ca0-4877-4c0c-b606-24f3ee3ae43c" style="width: 500px"></p>
+
+
 # 기수 정렬
+- 정의: 값을 놓고 *비교할 자릿수*를 정한 다음 해당 자릿수만 비교하는 방식
+  - 값을 비교하지 않음 ex) 82 > 10 같은 비교 X
+- 시간 복잡도: **O(kn)** (k: 데이터의 자릿수)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4af55979-6c9b-44e3-ba93-fa958db40dbc" style="width: 700px">
+</p>
 
 ---
-<a name="quick-sort">1</a> 출처: https://gmlwjd9405.github.io/
+<a name="quick-sort">1</a> 출처: https://gmlwjd9405.github.io/<br>
 이미지 출처: Geeks for Geeks
