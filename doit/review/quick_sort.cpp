@@ -27,7 +27,7 @@ int partition(vector<int> &arr, int start, int end) {
   int mid = start + (end - start) / 2;
   int pivot_val = arr[mid];
   
-  swap(arr[mid], arr[end]);
+  swap(arr[mid], arr[end]); // pivot 값을 배열의 마지막에 두는 게 일반적
 
   int i = start - 1;
   for (int j=start; j<end; j++) { // pivot이 end 인덱스로 가기 때문에 신경쓰지 않는다!
@@ -36,7 +36,7 @@ int partition(vector<int> &arr, int start, int end) {
       swap(arr[j], arr[i]);
     }
   } 
-  swap(arr[i+1], arr[end]); // pivot 값을 배열의 마지막에 두는 게 일반적
+  swap(arr[i+1], arr[end]); // i+1은 pivot보다 작은 값들이 끝나는 위치로, 여기에 pivot이 복귀되어야 함!
   return i+1;
 }
 
